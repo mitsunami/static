@@ -9,7 +9,7 @@ pipeline {
                     ls -lah
                 '''
                 withAWS(credentials: 'aws-static') {
-                    s3Upload(file:'index.html', bucket:'udacity-jenkins-project', path: '.')
+                    s3Upload(file:'index.html', bucket:'udacity-jenkins-project', path: '.', verbose:true)
                 }
             }
         }
